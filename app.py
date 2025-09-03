@@ -23,3 +23,11 @@ if menu == "Overall" :
 
   overall_image_path = os.path.join(image_dir, "mochi.png")
   st.image(overall_image_path, caption="Mochi", use_column_width=True)
+
+  X_VALUES = range(10)
+  Y_VALUES = [i**2 for i in X_VALUES]
+
+  fig, ax = plt.subplots()
+  ax.plot(X_VALUES,Y_VALUES)
+  ax.set_title("Sample Plot")
+  st.pyplot(fig)
